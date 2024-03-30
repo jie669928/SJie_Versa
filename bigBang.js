@@ -14,11 +14,10 @@ function generateBigBangArray() {
     return bigBangArray;
 }
 
-// Save the array to an output.json file
 const fs = require('fs');
 const result = generateBigBangArray();
 
 fs.writeFile('output.json', JSON.stringify(result, null, 2), (err) => {
     if (err) throw err;
-    console.log('The BIG BANG array has been saved to output.json');
+    console.log('The BIG BANG array has been saved as output.json');
 });
